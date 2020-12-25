@@ -1,0 +1,10 @@
+disabled_rules:
+  - line_length
+  - type_name
+  - function_body_length
+  - identifier_name
+  - vertical_parameter_alignment
+  - vertical_whitespace
+included:
+  - ExtrasKit
+  - Tests
