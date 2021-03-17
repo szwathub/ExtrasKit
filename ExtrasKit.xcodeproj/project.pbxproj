@@ -24,7 +24,7 @@
 		3647414720DCD1B4007C975D /* ExtrasKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36307BE6200CD79200D53049 /* ExtrasKit.framework */; };
 		3647415020DCD1F3007C975D /* ExtrasKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3647414E20DCD1F3007C975D /* ExtrasKitTests.swift */; };
 		364FA07320DA891800D7B25B /* ExtrasKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 364FA07120DA891800D7B25B /* ExtrasKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B71F30A26026A4900EEB16E /* SExtensionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71F2FB26026A4900EEB16E /* SExtensionKit.swift */; };
+		5B71F30A26026A4900EEB16E /* ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71F2FB26026A4900EEB16E /* ExtrasKit.swift */; };
 		5B71F30B26026A4900EEB16E /* UIImage+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71F2FE26026A4900EEB16E /* UIImage+ExtrasKit.swift */; };
 		5B71F30C26026A4900EEB16E /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71F2FF26026A4900EEB16E /* UIImage+Color.swift */; };
 		5B71F30D26026A4900EEB16E /* UIImage+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71F30026026A4900EEB16E /* UIImage+Orientation.swift */; };
@@ -60,7 +60,7 @@
 		500E467A33E6803CE71A6BA4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		55ECF280EC2F23EC55A6C08D /* Pods_ExtrasKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtrasKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B71F2E4260268B600EEB16E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		5B71F2FB26026A4900EEB16E /* SExtensionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SExtensionKit.swift; sourceTree = "<group>"; };
+		5B71F2FB26026A4900EEB16E /* ExtrasKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrasKit.swift; sourceTree = "<group>"; };
 		5B71F2FE26026A4900EEB16E /* UIImage+ExtrasKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5B71F2FF26026A4900EEB16E /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		5B71F30026026A4900EEB16E /* UIImage+Orientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Orientation.swift"; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			children = (
 				364FA07220DA891800D7B25B /* Info.plist */,
 				364FA07120DA891800D7B25B /* ExtrasKit.h */,
-				5B71F2FB26026A4900EEB16E /* SExtensionKit.swift */,
+				5B71F2FB26026A4900EEB16E /* ExtrasKit.swift */,
 				5B71F2FC26026A4900EEB16E /* UIKit */,
 			);
 			path = ExtrasKit;
@@ -404,7 +404,7 @@
 				5B71F30F26026A4900EEB16E /* UIButton+ExtrasKit.swift in Sources */,
 				5B71F31326026A4900EEB16E /* UIView+Screenshot.swift in Sources */,
 				5B71F30B26026A4900EEB16E /* UIImage+ExtrasKit.swift in Sources */,
-				5B71F30A26026A4900EEB16E /* SExtensionKit.swift in Sources */,
+				5B71F30A26026A4900EEB16E /* ExtrasKit.swift in Sources */,
 				5B71F31226026A4900EEB16E /* UIView+ExtrasKit.swift in Sources */,
 				5B71F31126026A4900EEB16E /* UIColor+ExtrasKit.swift in Sources */,
 				5B71F30C26026A4900EEB16E /* UIImage+Color.swift in Sources */,
