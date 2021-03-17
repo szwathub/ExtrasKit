@@ -24,11 +24,11 @@ public protocol ExtrasKitCompatible: AnyObject { }
 
 /// Gets a namespace holder for ExtrasKit compatible types.
 extension ExtrasKitCompatible {
-    public static var esk: ExtrasKitWrapper<Self>.Type {
+    public static var ek: ExtrasKitWrapper<Self>.Type {
         return ExtrasKitWrapper<Self>.self
     }
 
-    public var esk: ExtrasKitWrapper<Self> {
+    public var ek: ExtrasKitWrapper<Self> {
         return ExtrasKitWrapper(self)
     }
 }
