@@ -1,27 +1,28 @@
 //
-//  Copyright © 2020 ZhiweiSun. All rights reserved.
+//  Copyright © 2021 ZhiweiSun. All rights reserved.
 //
-//  File name: UIView+Screenshot.swift
+//  File name: UIView+ExtrasKit.swift
 //  Author:    Zhiwei Sun @szwathub
 //  E-mail:    szwathub@gmail.com
 //
 //  Description:
 //
 //  History:
-//      2020/12/25: Created by szwathub on 2020/12/25
+//      2021/12/1: Created by szwathub on 2021/12/1
 //
 
-import Foundation
+#if os(iOS) || os(tvOS)
 
-extension ExtrasKitWrapper where Base: UIView {
+import UIKit
+
+extension UIView {
+
     /// Take screenshot of view.
     ///
-    /// - Parameters:
-    ///     - opaque: A Boolean flag indicating whether the bitmap is opaque.
+    /// - Parameter opaque: A Boolean flag indicating whether the bitmap is opaque.
     /// - Returns: A screenshot image of view.
-    ///
     public func screenshot(_ opaque: Bool) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(base.bounds.size, opaque, UIScreen.main.scale)
+        UIGraphicsBeginImageContextWithOptions(bounds.size, opaque, UIScreen.main.scale)
         defer {
             UIGraphicsEndImageContext()
         }
@@ -30,9 +31,11 @@ extension ExtrasKitWrapper where Base: UIView {
             return nil
         }
 
-        base.layer.render(in: context)
+        layer.render(in: context)
         let image = UIGraphicsGetImageFromCurrentImageContext()
 
         return image
     }
 }
+
+#endif

@@ -1,8 +1,8 @@
 <h1 align="center">ExtrasKit</h1>
 
 <p align="center">
-    <a href="https://travis-ci.com/szwathub/ExtrasKit">
-        <img src="https://travis-ci.com/szwathub/ExtrasKit.svg?branch=master" alt="Travis Build Status">
+    <a href="https://github.com/szwathub/ExtrasKit/actions">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/szwathub/ExtrasKit/Xcode%20-%20Build%20and%20Analyze">
     </a>
     <a href="https://codecov.io/github/szwathub/ExtrasKit">
         <img src="https://codecov.io/gh/szwathub/ExtrasKit/branch/master/graph/badge.svg" alt="Codecov">
@@ -10,8 +10,7 @@
     <a href="http://cocoapods.org/pods/ExtrasKit">
         <img src="https://img.shields.io/cocoapods/v/ExtrasKit.svg?style=flat" alt="CocoaPods Version">
     </a>
-    <a href="https://houndci.com">
-        <img src="https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg" alt="Hound">
+    <a href="https://www.codefactor.io/repository/github/szwathub/extraskit"><img src="https://www.codefactor.io/repository/github/szwathub/extraskit/badge" alt="CodeFactor" />
     </a>
     <a href="https://github.com/szwathub/ExtrasKit">
         <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible">

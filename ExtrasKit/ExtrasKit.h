@@ -1,7 +1,7 @@
 ///
 ///  Copyright © 2021 ZhiweiSun. All rights reserved.
 ///
-///  File name: ExtrasKitTests.m
+///  File name: ExtrasKit.m
 ///  Author:    ZhiweiSun @szwathub
 ///  E-mail:    szwathub@gmail.com
 ///
@@ -20,5 +20,3 @@ FOUNDATION_EXPORT double ExtrasKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char ExtrasKitVersionString[];
 
 /// In this header, you should import all the public headers of your framework using statements like #import <ExtrasKit/PublicHeader.h>
-
-
