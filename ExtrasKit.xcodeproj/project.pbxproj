@@ -32,6 +32,8 @@
 		5B26FEAE2757637100F7C5CB /* UIColor+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26FEAD2757637100F7C5CB /* UIColor+ExtrasKit.swift */; };
 		5B26FEB027576BA600F7C5CB /* UIButton+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26FEAF27576BA600F7C5CB /* UIButton+ExtrasKit.swift */; };
 		5B792989274BF8D700BEB6D7 /* Codable+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B792988274BF8D700BEB6D7 /* Codable+ExtrasKit.swift */; };
+		5B902696288AFC5500B430AD /* ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B902695288AFC5500B430AD /* ExtrasKit.swift */; };
+		5B902698288AFDDE00B430AD /* UIViewController+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B902697288AFDDE00B430AD /* UIViewController+ExtrasKit.swift */; };
 		5BBA109A275A33FA0009EE60 /* Array+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA1099275A33FA0009EE60 /* Array+ExtrasKit.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		5B71F2E4260268B600EEB16E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		5B792988274BF8D700BEB6D7 /* Codable+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5B90267E288AF5BA00B430AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B902695288AFC5500B430AD /* ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrasKit.swift; sourceTree = "<group>"; };
+		5B902697288AFDDE00B430AD /* UIViewController+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5BBA1099275A33FA0009EE60 /* Array+ExtrasKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5DC935573ABC467E27D69080 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6D8D763650214551CFB6491A /* ExtrasKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = ExtrasKit.podspec; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				5B90267E288AF5BA00B430AD /* Info.plist */,
+				5B902695288AFC5500B430AD /* ExtrasKit.swift */,
 				5B8503F727463B9400E90B90 /* Swift */,
 				5B71F2FC26026A4900EEB16E /* UIKit */,
 			);
@@ -106,6 +111,7 @@
 				5B26FEAB2757631900F7C5CB /* UIView+ExtrasKit.swift */,
 				5B26FEAD2757637100F7C5CB /* UIColor+ExtrasKit.swift */,
 				5B26FEAF27576BA600F7C5CB /* UIButton+ExtrasKit.swift */,
+				5B902697288AFDDE00B430AD /* UIViewController+ExtrasKit.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -251,8 +257,10 @@
 				5B26FEAC2757631900F7C5CB /* UIView+ExtrasKit.swift in Sources */,
 				5B792989274BF8D700BEB6D7 /* Codable+ExtrasKit.swift in Sources */,
 				5BBA109A275A33FA0009EE60 /* Array+ExtrasKit.swift in Sources */,
+				5B902698288AFDDE00B430AD /* UIViewController+ExtrasKit.swift in Sources */,
 				5B26FEAA27575C3800F7C5CB /* UIImage+ExtrasKit.swift in Sources */,
 				5B26FEAE2757637100F7C5CB /* UIColor+ExtrasKit.swift in Sources */,
+				5B902696288AFC5500B430AD /* ExtrasKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

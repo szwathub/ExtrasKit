@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 
         view.addSubview(imageView)
         view.backgroundColor = .white
+
+        ek.dismissToRootViewController(animated: <#T##Bool#>)
     }
 
     override func didReceiveMemoryWarning() {
