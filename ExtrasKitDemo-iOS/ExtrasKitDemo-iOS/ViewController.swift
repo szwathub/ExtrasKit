@@ -23,9 +23,8 @@ class ViewController: UIViewController {
         let imageView = UIImageView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
         imageView.image = asd
 
-        let button = UIButton()
-
         view.addSubview(imageView)
+        view.backgroundColor = .white
     }
 
     override func didReceiveMemoryWarning() {

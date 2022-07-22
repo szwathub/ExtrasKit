@@ -3,51 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B71F2F6260269A900EEB16E /* ExtrasKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B71F2F2260269A100EEB16E /* ExtrasKit.framework */; };
-		5B71F2F7260269A900EEB16E /* ExtrasKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B71F2F2260269A100EEB16E /* ExtrasKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5B01477A2889974B0083DBD2 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B0147792889974B0083DBD2 /* LaunchImage@2x.png */; };
+		5B01477D288997520083DBD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B01477B288997520083DBD2 /* LaunchScreen.storyboard */; };
+		5B01478E28899A520083DBD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B01478D28899A520083DBD2 /* Assets.xcassets */; };
+		5B90268F288AF8AA00B430AD /* ExtrasKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B90268E288AF88A00B430AD /* ExtrasKit.framework */; };
+		5B902690288AF8AA00B430AD /* ExtrasKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B90268E288AF88A00B430AD /* ExtrasKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5B71F2F1260269A100EEB16E /* PBXContainerItemProxy */ = {
+		5B90268D288AF88A00B430AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5B71F2EB260269A100EEB16E /* ExtrasKit.xcodeproj */;
+			containerPortal = 5B902688288AF88A00B430AD /* ExtrasKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 36307BE6200CD79200D53049;
-			remoteInfo = ExtrasKit;
-		};
-		5B71F2F3260269A100EEB16E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B71F2EB260269A100EEB16E /* ExtrasKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3647414220DCD1B4007C975D;
-			remoteInfo = ExtrasKitTests;
-		};
-		5B71F2F9260269B300EEB16E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B71F2EB260269A100EEB16E /* ExtrasKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 36307BE5200CD79200D53049;
 			remoteInfo = ExtrasKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5B71F2F8260269A900EEB16E /* Embed Frameworks */ = {
+		5B0147CE2889A7E80083DBD2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5B71F2F7260269A900EEB16E /* ExtrasKit.framework in Embed Frameworks */,
+				5B902690288AF8AA00B430AD /* ExtrasKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,37 +41,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5B71F2EB260269A100EEB16E /* ExtrasKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ExtrasKit.xcodeproj; path = ../ExtrasKit.xcodeproj; sourceTree = "<group>"; };
+		5B0147792889974B0083DBD2 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		5B01477C288997520083DBD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B01478D28899A520083DBD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B902688288AF88A00B430AD /* ExtrasKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ExtrasKit.xcodeproj; path = ../ExtrasKit.xcodeproj; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ExtrasKitDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExtrasKitDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		607FACCD1AFB9204008FA782 /* Frameworks */ = {
+		5B0147BD2889A41A0083DBD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B71F2F6260269A900EEB16E /* ExtrasKit.framework in Frameworks */,
+				5B90268F288AF8AA00B430AD /* ExtrasKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B71F2EC260269A100EEB16E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5B71F2F2260269A100EEB16E /* ExtrasKit.framework */,
-				5B71F2F4260269A100EEB16E /* ExtrasKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5B71F2F5260269A900EEB16E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,10 +70,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B902689288AF88A00B430AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B90268E288AF88A00B430AD /* ExtrasKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				5B71F2EB260269A100EEB16E /* ExtrasKit.xcodeproj */,
+				5B902688288AF88A00B430AD /* ExtrasKit.xcodeproj */,
 				607FACD21AFB9204008FA782 /* ExtrasKitDemo-iOS */,
 				607FACD11AFB9204008FA782 /* Products */,
 				5B71F2F5260269A900EEB16E /* Frameworks */,
@@ -116,9 +101,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				5B0147792889974B0083DBD2 /* LaunchImage@2x.png */,
+				5B01477B288997520083DBD2 /* LaunchScreen.storyboard */,
+				5B01478D28899A520083DBD2 /* Assets.xcassets */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			path = "ExtrasKitDemo-iOS";
@@ -139,16 +124,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ExtrasKitDemo-iOS" */;
 			buildPhases = (
+				5B0147CE2889A7E80083DBD2 /* Embed Frameworks */,
+				5B0147BD2889A41A0083DBD2 /* Frameworks */,
 				607FACCC1AFB9204008FA782 /* Sources */,
-				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				5B71F2F8260269A900EEB16E /* Embed Frameworks */,
 				5B71F33126026B6700EEB16E /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5B71F2FA260269B300EEB16E /* PBXTargetDependency */,
 			);
 			name = "ExtrasKitDemo-iOS";
 			productName = "ExtrasKitDemo-iOS";
@@ -186,8 +170,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5B71F2EC260269A100EEB16E /* Products */;
-					ProjectRef = 5B71F2EB260269A100EEB16E /* ExtrasKit.xcodeproj */;
+					ProductGroup = 5B902689288AF88A00B430AD /* Products */;
+					ProjectRef = 5B902688288AF88A00B430AD /* ExtrasKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -198,18 +182,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5B71F2F2260269A100EEB16E /* ExtrasKit.framework */ = {
+		5B90268E288AF88A00B430AD /* ExtrasKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ExtrasKit.framework;
-			remoteRef = 5B71F2F1260269A100EEB16E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5B71F2F4260269A100EEB16E /* ExtrasKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ExtrasKitTests.xctest;
-			remoteRef = 5B71F2F3260269A100EEB16E /* PBXContainerItemProxy */;
+			remoteRef = 5B90268D288AF88A00B430AD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -219,9 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				5B01477D288997520083DBD2 /* LaunchScreen.storyboard in Resources */,
+				5B01478E28899A520083DBD2 /* Assets.xcassets in Resources */,
+				5B01477A2889974B0083DBD2 /* LaunchImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +207,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		5B71F33126026B6700EEB16E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -243,7 +221,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -259,29 +237,13 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		5B71F2FA260269B300EEB16E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ExtrasKit;
-			targetProxy = 5B71F2F9260269B300EEB16E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		5B01477B288997520083DBD2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
+				5B01477C288997520083DBD2 /* Base */,
 			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
-			);
-			name = LaunchScreen.xib;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -403,12 +365,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = N26M59Z84Z;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "ExtrasKitDemo-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,12 +391,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = N26M59Z84Z;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = "ExtrasKitDemo-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

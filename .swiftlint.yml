@@ -1,6 +1,5 @@
 included:
   - ExtrasKit
-  - Tests
 
 disabled_rules:
   - switch_case_alignment
