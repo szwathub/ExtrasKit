@@ -23,7 +23,7 @@ jobs:
         with:
           swift-version: ${{ matrix.swift }}
       - name: Build
-        run: swift build
+        run: echo ${{ matrix.swift }}
 
 
   build:
