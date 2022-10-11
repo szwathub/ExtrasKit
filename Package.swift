@@ -5,11 +5,14 @@ import PackageDescription
 
 let package = Package(
     name: "ExtrasKit",
+    platforms: [
+        .iOS(.v9)
+    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "ExtrasKit",
-            targets: ["ExtrasKit"]),
+            targets: ["ExtrasKit"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,10 +24,6 @@ let package = Package(
         .target(
             name: "ExtrasKit",
             dependencies: [],
-            path: "ExtrasKit"),
-        .testTarget(
-            name: "ExtrasKitTests",
-            dependencies: ["ExtrasKit"],
-            path: "Tests"),
+            path: "ExtrasKit")
     ]
 )

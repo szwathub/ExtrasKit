@@ -1,0 +1,53 @@
+name: Xcode - Build and Analyze
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  jobs1:
+    name: Build Swift with version ${{ matrix.swift }}
+    strategy:
+      matrix:
+        swift: ["5.2", "5.3"]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install xcode-install
+        run: gem install xcode-install
+      - name: Setup Swift
+        uses: fwal/setup-swift@v1.9.1
+        with:
+          swift-version: ${{ matrix.swift }}
+      - name: Build
+        run: echo ${{ matrix.swift }}
+
+
+  build:
+    needs: jobs1
+    name: Build and analyse default scheme using xcodebuild command on ${{ matrix.info }}
+    strategy:
+        matrix:
+            info: ["5.2", "5.3"]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set Default Scheme
+        run: |
+          scheme_list=$(xcodebuild -list -json | tr -d "\n")
+          default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
+          echo $default | cat >default
+          echo Using default scheme: $default
+      # - name: Build
+      #   env:
+      #     scheme: ${{ 'default' }}
+      #     WORKSPACE: ExtrasKit.xcworkspace
+      #   run: |
+      #     if [ $scheme = default ]; then scheme=$(cat default); fi
+      #     if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
+      #     file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+      #     xcodebuild clean build analyze -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
