@@ -15,8 +15,12 @@ import Foundation
 
 public struct ExtrasKitWrapper<Base> {
 
-    public let base: Base
+    /// Base object to extend.
+    public var base: Base
 
+    /// Creates extensions with base object.
+    ///
+    /// - Parameter base: Base object.
     public init(_ base: Base) {
         self.base = base
     }
@@ -29,20 +33,32 @@ public protocol ExtrasKitCompatibleValue { }
 /// Gets a namespace holder for ExtrasKit compatible types.
 extension ExtrasKitCompatible {
     public static var ek: ExtrasKitWrapper<Self>.Type {
-        return ExtrasKitWrapper<Self>.self
+        get { ExtrasKitWrapper<Self>.self }
+        // this enables using ExtrasKit to "mutate" base type
+        // swiftlint:disable:next unused_setter_value
+        set { }
     }
 
     public var ek: ExtrasKitWrapper<Self> {
-        return ExtrasKitWrapper(self)
+        get { ExtrasKitWrapper(self) }
+        // this enables using ExtrasKit to "mutate" base type
+        // swiftlint:disable:next unused_setter_value
+        set { }
     }
 }
 
 extension ExtrasKitCompatibleValue {
     public static var ek: ExtrasKitWrapper<Self>.Type {
-        return ExtrasKitWrapper<Self>.self
+        get { ExtrasKitWrapper<Self>.self }
+        // this enables using ExtrasKit to "mutate" base type
+        // swiftlint:disable:next unused_setter_value
+        set { }
     }
 
     public var ek: ExtrasKitWrapper<Self> {
-        return ExtrasKitWrapper(self)
+        get { ExtrasKitWrapper(self) }
+        // this enables using ExtrasKit to "mutate" base type
+        // swiftlint:disable:next unused_setter_value
+        set { }
     }
 }

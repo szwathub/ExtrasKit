@@ -15,20 +15,16 @@
 
 import UIKit
 
-extension UIViewController: ExtrasKitCompatible {
-    
-}
+extension UIViewController: ExtrasKitCompatible { }
 
 extension ExtrasKitWrapper where Base: UIViewController {
 
-    /**
-     Dismisses until there's only a single view controller.
-
-     - Parameters:
-        - animated: A Boolean flag indicating whether the animation is executed.
-        - completion: A completion handler that is to be called right after the controller is
-     dismissed (After the animation is concluded).
-     */
+    /// Dismisses until there's only a single view controller.
+    ///
+    /// - Parameters:
+    ///   - animated: A Boolean flag indicating whether the animation is executed.
+    ///   - completion: A completion handler that is to be called right after the
+    ///   controller is dismissed (After the animation is concluded).
     public func dismissToRootViewController(animated: Bool, completion: (() -> Void)? = nil) {
         guard let presenting = base.presentingViewController else {
             base.dismiss(animated: animated) {

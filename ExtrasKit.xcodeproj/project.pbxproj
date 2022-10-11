@@ -6,20 +6,6 @@
 	objectVersion = 54;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		B81EEE165673B81B492C5D2F /* Cleanup Whitespace */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 8B677F01530512C9E57BC955 /* Build configuration list for PBXAggregateTarget "Cleanup Whitespace" */;
-			buildPhases = (
-				6AE0D95577FFC319F97D58D7 /* Cleanup Whitespace */,
-			);
-			dependencies = (
-			);
-			name = "Cleanup Whitespace";
-			productName = "Cleanup Whitespace";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		5B0147B32889A1520083DBD2 /* Array+ExtrasKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5BBA1099275A33FA0009EE60 /* Array+ExtrasKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B0147B42889A1520083DBD2 /* Codable+ExtrasKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5B792988274BF8D700BEB6D7 /* Codable+ExtrasKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,7 +37,7 @@
 		5B902697288AFDDE00B430AD /* UIViewController+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5BBA1099275A33FA0009EE60 /* Array+ExtrasKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5DC935573ABC467E27D69080 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		6D8D763650214551CFB6491A /* ExtrasKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = ExtrasKit.podspec; sourceTree = "<group>"; };
+		6D8D763650214551CFB6491A /* ExtrasKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = ExtrasKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +180,6 @@
 			projectRoot = "";
 			targets = (
 				36307BE5200CD79200D53049 /* ExtrasKit */,
-				B81EEE165673B81B492C5D2F /* Cleanup Whitespace */,
 			);
 		};
 /* End PBXProject section */
@@ -228,24 +213,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		6AE0D95577FFC319F97D58D7 /* Cleanup Whitespace */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Cleanup Whitespace";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\ndirectories=(Examples ExtrasKit Tests)\n\nfor directory in \"${directories[@]}\"\ndo\n    echo \"Cleaning whitespace in directory: $directory\"\n    find $directory -iregex '.*\\.swift' -exec sed -E -i '' -e 's/[[:blank:]]*$//' {} \\;\n    find $directory -iregex '.*\\.[hm]' -exec sed -E -i '' -e 's/[[:blank:]]*$//' {} \\;\ndone\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,15 +234,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		120ECC91092476FADB6D228A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				PRODUCT_NAME = "Cleanup Whitespace";
-			};
-			name = Release;
-		};
 		36307BF8200CD79200D53049 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -455,15 +413,6 @@
 			};
 			name = Release;
 		};
-		7C8CC7F93C894B01DC9C4C2A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				PRODUCT_NAME = "Cleanup Whitespace";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,15 +430,6 @@
 			buildConfigurations = (
 				36307BFB200CD79200D53049 /* Debug */,
 				36307BFC200CD79200D53049 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B677F01530512C9E57BC955 /* Build configuration list for PBXAggregateTarget "Cleanup Whitespace" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				120ECC91092476FADB6D228A /* Release */,
-				7C8CC7F93C894B01DC9C4C2A /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,4 +1,4 @@
-g#
+#
 # Be sure to run `pod lib lint ExtrasKit.podspec' to ensure this is a
 # valid spec before submitting.
 #

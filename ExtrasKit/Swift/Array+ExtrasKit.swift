@@ -13,19 +13,35 @@
 
 import Foundation
 
-extension Array where Element: Equatable {
+extension Array: ExtrasKitCompatibleValue { }
 
-    /// Removes the first given element
+extension ExtrasKitWrapper where Base: RangeReplaceableCollection, Base.Element: Equatable {
+
+    /// Removes the first given element from the list if it is already present.
     ///
-    /// - Parameter element: the element to be removed
-    @discardableResult
-    public mutating func removeFirst(_ element: Element) -> Index? {
-        if let index = firstIndex(of: element) {
-            remove(at: index)
+    /// if `element` was not contained in the list, this method has no effect.
+    /// In the following example, a element is remoed from `listOfNumber`, When an
+    /// no-existing element is removed, the `listOfNumber` list does not change.
+    ///
+    ///     var listOfNumber = [1, 2]
+    ///     print(listOfNumber.ek.removeFirst(0))
+    ///     // Prints "(removed: nil, listAfterRemoved: [1, 2])"
+    ///
+    ///     print(listOfNumber.ek.removeFirst(1))
+    ///     // Prints "(removed: Optional(0), listAfterRemoved: [2])"
+    ///
+    /// - Parameter element: An element to removed from the list.
+    /// - Returns: `(nil, oldList)` if `element` was not contained in the
+    ///   list. If an element equal to `element` was already contained in the
+    ///   list, the method returns `(index, newList)`, where `index` is the
+    ///   first position of the element to remove.
+    public mutating func removeFirst(_ element: Base.Element) -> (removed: Base.Index?, listAfterRemoved: Base) {
 
-            return index
+        if let index = base.firstIndex(of: element) {
+            base.remove(at: index)
+            return (index, base)
         }
 
-        return nil
+        return (nil, base)
     }
 }
