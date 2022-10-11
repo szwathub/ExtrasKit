@@ -24,10 +24,6 @@ let package = Package(
         .target(
             name: "ExtrasKit",
             dependencies: [],
-            path: "ExtrasKit"),
-        .testTarget(
-            name: "ExtrasKitTests",
-            dependencies: ["ExtrasKit"],
-            path: "Tests")
+            path: "ExtrasKit")
     ]
 )
