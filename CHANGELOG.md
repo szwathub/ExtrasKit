@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 <for new features.>
 
+- add a method that calculates the total of any sequence.
+
 ### Fixed
 <for any bug fixes.>
 
