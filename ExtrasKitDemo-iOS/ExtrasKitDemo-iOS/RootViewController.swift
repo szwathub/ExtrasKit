@@ -25,9 +25,6 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        let asd = [1.1, 2.2, 3.1]
-        print(asd.ek.sum)
     }
 
     override func didReceiveMemoryWarning() {
