@@ -24,7 +24,7 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = "  bbbbbb".ek.color
+        view.backgroundColor = "bbbbbb".ek.color
 //        UIColor(hexString: )
         // Do any additional setup after loading the view, typically from a nib.
         if #available(iOS 14.0, *) {
