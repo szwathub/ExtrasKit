@@ -72,18 +72,27 @@ extension UIColor {
 
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
+}
+
+extension UIColor: ExtrasKitCompatible { }
+
+extension ExtrasKitWrapper where Base: UIColor {
 
     /// Gets the hexadecimal string of color.
     public var hexString: String? {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0
         var alpha: CGFloat = 0
 
         let multiplier = CGFloat(255.999999)
-
-        guard getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
+        guard base.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
             return nil
+        }
+
+        if let colors = base.cgColor.components, colors.count == 4 {
+            red = colors[0]
+            green = colors[1]
+            blue = colors[2]
+            alpha = colors[3]
         }
 
         if alpha == 1.0 {

@@ -36,12 +36,19 @@ extension ExtrasKitWrapper where Base: RangeReplaceableCollection, Base.Element:
     ///   list, the method returns `(index, newList)`, where `index` is the
     ///   first position of the element to remove.
     public mutating func removeFirst(_ element: Base.Element) -> (removed: Base.Index?, listAfterRemoved: Base) {
-
         if let index = base.firstIndex(of: element) {
             base.remove(at: index)
             return (index, base)
         }
 
         return (nil, base)
+    }
+}
+
+extension ExtrasKitWrapper where Base: Sequence, Base.Element: AdditiveArithmetic {
+
+    /// Calculates ans return the total of any sequence with `AdditiveArithmetic` elements
+    public var sum: Base.Element {
+        return base.reduce(.zero, +)
     }
 }
