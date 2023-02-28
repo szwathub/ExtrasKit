@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 <for new features.>
 
+- add a function that scroll the scroll view contents until the specified position is visible
+
 ### Fixed
 <for any bug fixes.>
 
@@ -22,8 +24,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.0.1] - 2023-2-22
 ### Added
-<for new features.>
-
 - add a property `sum` for `Array` that calculates the total of any sequence
 - add a property `color` for `String` that creates color
 
