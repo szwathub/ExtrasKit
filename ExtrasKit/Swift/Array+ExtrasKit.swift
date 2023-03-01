@@ -52,3 +52,19 @@ extension ExtrasKitWrapper where Base: Sequence, Base.Element: AdditiveArithmeti
         return base.reduce(.zero, +)
     }
 }
+
+extension ExtrasKitWrapper where Base: Collection {
+
+    /// Accesses the element at the specified index in a safe way.
+    ///
+    /// - Parameter index: The index of the element to access.
+    /// - Returns: `nil` if `index` isn't be in the range `indices`. otherwise the element
+    /// at the specified index.
+    public subscript(safe index: Base.Index) -> Base.Element? {
+        guard base.indices.contains(index) else {
+            return nil
+        }
+
+        return base[index]
+    }
+}
