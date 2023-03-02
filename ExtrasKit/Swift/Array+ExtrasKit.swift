@@ -47,7 +47,7 @@ extension ExtrasKitWrapper where Base: RangeReplaceableCollection, Base.Element:
 
 extension ExtrasKitWrapper where Base: Sequence, Base.Element: AdditiveArithmetic {
 
-    /// Calculates ans return the total of any sequence with `AdditiveArithmetic` elements
+    /// Calculates and return the total of any sequence with `AdditiveArithmetic` elements
     public var sum: Base.Element {
         return base.reduce(.zero, +)
     }
