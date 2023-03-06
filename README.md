@@ -1,14 +1,12 @@
 <h1 align="center">ExtrasKit</h1>
 
 <p align="center">
-    <a href="https://github.com/szwathub/ExtrasKit/actions">
-        <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/szwathub/ExtrasKit/Xcode%20-%20Build%20and%20Analyze">
-    </a>
+    <a href="https://github.com/szwathub/ExtrasKit/actions?query=workflow%3Aextraskit"><img src="https://github.com/szwathub/ExtrasKit/workflows/extraskit/badge.svg?branch=master"></a>
     <a href="https://codecov.io/github/szwathub/ExtrasKit">
         <img src="https://codecov.io/gh/szwathub/ExtrasKit/branch/master/graph/badge.svg" alt="Codecov">
     </a>
     <a href="http://cocoapods.org/pods/ExtrasKit">
-        <img src="https://img.shields.io/cocoapods/v/ExtrasKit.svg?style=flat" alt="CocoaPods Version">
+        <img src="https://img.shields.io/cocoapods/v/ExtrasKit" alt="CocoaPods Version">
     </a>
     <a href="https://www.codefactor.io/repository/github/szwathub/extraskit"><img src="https://www.codefactor.io/repository/github/szwathub/extraskit/badge" alt="CodeFactor" />
     </a>
