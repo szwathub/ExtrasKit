@@ -1,7 +1,9 @@
 <h1 align="center">ExtrasKit</h1>
 
 <p align="center">
-    <a href="https://github.com/szwathub/ExtrasKit/actions?query=workflow%3Aextraskit"><img src="https://github.com/szwathub/ExtrasKit/workflows/extraskit/badge.svg?branch=master"></a>
+    <a href="https://github.com/szwathub/ExtrasKit/actions?query=workflow%3Abuild">
+        <img src="https://github.com/szwathub/ExtrasKit/actions/workflows/build.yml/badge.svg?branch=master">
+     </a>
     <a href="https://codecov.io/github/szwathub/ExtrasKit">
         <img src="https://codecov.io/gh/szwathub/ExtrasKit/branch/master/graph/badge.svg" alt="Codecov">
     </a>
