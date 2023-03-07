@@ -8,8 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 <for new features.>
 
-- add a function that scrolls the scroll view contents until the specified position is visible
+- add a method that scrolls the scroll view contents until the specified position is visible.
 - add a safely subscript funciton for protocol `Collection`.
+- feature: add a static method that triggers impact feedback.
 
 ### Fixed
 <for any bug fixes.>

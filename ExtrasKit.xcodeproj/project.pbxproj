@@ -13,6 +13,7 @@
 		5B0147B62889A1520083DBD2 /* UIView+ExtrasKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5B26FEAB2757631900F7C5CB /* UIView+ExtrasKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B0147B72889A1520083DBD2 /* UIColor+ExtrasKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5B26FEAD2757637100F7C5CB /* UIColor+ExtrasKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B0147B82889A1520083DBD2 /* UIButton+ExtrasKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5B26FEAF27576BA600F7C5CB /* UIButton+ExtrasKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B0AA58C29B72CFE00B51C16 /* UIImpactFeedbackGenerator+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AA58B29B72CFE00B51C16 /* UIImpactFeedbackGenerator+ExtrasKit.swift */; };
 		5B26FEAA27575C3800F7C5CB /* UIImage+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26FEA927575C3800F7C5CB /* UIImage+ExtrasKit.swift */; };
 		5B26FEAC2757631900F7C5CB /* UIView+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26FEAB2757631900F7C5CB /* UIView+ExtrasKit.swift */; };
 		5B26FEAE2757637100F7C5CB /* UIColor+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26FEAD2757637100F7C5CB /* UIColor+ExtrasKit.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		36307BE6200CD79200D53049 /* ExtrasKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtrasKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		500E467A33E6803CE71A6BA4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5B0AA58B29B72CFE00B51C16 /* UIImpactFeedbackGenerator+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImpactFeedbackGenerator+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5B26FEA927575C3800F7C5CB /* UIImage+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5B26FEAB2757631900F7C5CB /* UIView+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5B26FEAD2757637100F7C5CB /* UIColor+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ExtrasKit.swift"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				5B26FEAF27576BA600F7C5CB /* UIButton+ExtrasKit.swift */,
 				5B902697288AFDDE00B430AD /* UIViewController+ExtrasKit.swift */,
 				5B6056F229ACBEA400A8DF31 /* UIScrollView+ExtrasKit.swift */,
+				5B0AA58B29B72CFE00B51C16 /* UIImpactFeedbackGenerator+ExtrasKit.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				5B26FEAA27575C3800F7C5CB /* UIImage+ExtrasKit.swift in Sources */,
 				5B26FEAE2757637100F7C5CB /* UIColor+ExtrasKit.swift in Sources */,
 				5B902696288AFC5500B430AD /* ExtrasKit.swift in Sources */,
+				5B0AA58C29B72CFE00B51C16 /* UIImpactFeedbackGenerator+ExtrasKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
