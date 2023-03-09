@@ -66,3 +66,16 @@ extension ExtrasKitWrapper where Base == String {
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
+
+extension ExtrasKitWrapper where Base == String {
+
+    /// Validates if a given string is a valid email address.
+    ///
+    /// - Returns: Return `true` if string is a valid email address, `false` otherwise.
+    public func isValidEmail() -> Bool {
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+
+        return predicate.evaluate(with: base)
+    }
+}

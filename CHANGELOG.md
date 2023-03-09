@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - add a method that scrolls the scroll view contents until the specified position is visible.
 - add a safely subscript funciton for protocol `Collection`.
-- feature: add a static method that triggers impact feedback.
+- add a static method that triggers impact feedback.
+- add a method that validates if a string is a valid email address.
 
 ### Fixed
 <for any bug fixes.>
