@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - add a safely subscript funciton for protocol `Collection`.
 - add a static method that triggers impact feedback.
 - add a method that validates if a string is a valid email address.
+- add static property that obtains application info for `String`.
 
 ### Fixed
 <for any bug fixes.>

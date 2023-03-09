@@ -79,3 +79,46 @@ extension ExtrasKitWrapper where Base == String {
         return predicate.evaluate(with: base)
     }
 }
+
+extension ExtrasKitWrapper where Base == String {
+
+    /// Obtains the actual name of the executable file that runs the application.
+    public static var appName: String? {
+        guard let info = Bundle.main.infoDictionary?["CFBundleName"] as? String else {
+            return nil
+        }
+
+        return info
+    }
+
+    /// Obtains the name of the application as it appears on the user's device. This name is what the user sees
+    /// on the home screen and in the App Store
+    public static var appDisplayName: String? {
+        guard let info = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String else {
+            return nil
+        }
+
+        return info
+    }
+
+    /// Obtains the short version of the application, also known as the "marketing version"
+    /// The version number usually consists of three numbers, such as 1.0.1, where the first number
+    /// represents the major version, the second number represents the minor version, and the third
+    /// number represents the revision version. The value of this key is a string data type.
+    public static var appVersion: String? {
+        guard let info = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
+            return nil
+        }
+
+        return info
+    }
+
+    /// Obtains the build version number of the application.
+    public static var appBuildVersion: String? {
+        guard let info = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else {
+            return nil
+        }
+
+        return info
+    }
+}
