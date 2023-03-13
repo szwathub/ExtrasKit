@@ -8,12 +8,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 <for new features.>
 
-- add a method that scrolls the scroll view contents until the specified position is visible.
-- add a safely subscript funciton for protocol `Collection`.
-- add a static method that triggers impact feedback.
-- add a method that validates if a string is a valid email address.
-- add static property that obtains application info for `String`.
-
 ### Fixed
 <for any bug fixes.>
 
@@ -26,10 +20,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 <for now removed features.>
 
+---
+
+## [2.0.2] - 2023-3-13
+### Added
+<for new features.>
+
+- Add a method that scrolls the scroll view contents until the specified position is visible.
+- Add a safely subscript funciton for protocol `Collection`.
+- Add a static method that triggers impact feedback.
+- Add a method that validates if a string is a valid email address.
+- Add static property that obtains application info for `String`.
+
+---
+
 ## [2.0.1] - 2023-2-22
 ### Added
-- add a property `sum` for `Array` that calculates the total of any sequence
-- add a property `color` for `String` that creates color
+- Add a property `sum` for `Array` that calculates the total of any sequence
+- Add a property `color` for `String` that creates color
 
-[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.0...develop
+[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.1...develop
 [2.0.1]: https://github.com/szwathub/ExtrasKit/compare/2.0.0...szwathub:2.0.1
+[2.0.2]: https://github.com/szwathub/ExtrasKit/compare/2.0.1...szwathub:2.0.2
