@@ -39,6 +39,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add a property `sum` for `Array` that calculates the total of any sequence
 - Add a property `color` for `String` that creates color
 
-[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.1...develop
+[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.2...develop
 [2.0.1]: https://github.com/szwathub/ExtrasKit/compare/2.0.0...szwathub:2.0.1
 [2.0.2]: https://github.com/szwathub/ExtrasKit/compare/2.0.1...szwathub:2.0.2
