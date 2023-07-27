@@ -24,6 +24,7 @@
 		5B902698288AFDDE00B430AD /* UIViewController+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B902697288AFDDE00B430AD /* UIViewController+ExtrasKit.swift */; };
 		5B97F8CB291BA19A00127571 /* String+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97F8CA291BA19A00127571 /* String+ExtrasKit.swift */; };
 		5BBA109A275A33FA0009EE60 /* Array+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA1099275A33FA0009EE60 /* Array+ExtrasKit.swift */; };
+		5BBD97E82A724214005B75BC /* UIApplication+ExtrasKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD97E72A724214005B75BC /* UIApplication+ExtrasKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		5B97F8CA291BA19A00127571 /* String+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5BA1D30729AE79AF00ECCA29 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		5BBA1099275A33FA0009EE60 /* Array+ExtrasKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ExtrasKit.swift"; sourceTree = "<group>"; };
+		5BBD97E72A724214005B75BC /* UIApplication+ExtrasKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ExtrasKit.swift"; sourceTree = "<group>"; };
 		5DC935573ABC467E27D69080 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6D8D763650214551CFB6491A /* ExtrasKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = ExtrasKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				5B902697288AFDDE00B430AD /* UIViewController+ExtrasKit.swift */,
 				5B6056F229ACBEA400A8DF31 /* UIScrollView+ExtrasKit.swift */,
 				5B0AA58B29B72CFE00B51C16 /* UIImpactFeedbackGenerator+ExtrasKit.swift */,
+				5BBD97E72A724214005B75BC /* UIApplication+ExtrasKit.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBD97E82A724214005B75BC /* UIApplication+ExtrasKit.swift in Sources */,
 				5B26FEB027576BA600F7C5CB /* UIButton+ExtrasKit.swift in Sources */,
 				5B26FEAC2757631900F7C5CB /* UIView+ExtrasKit.swift in Sources */,
 				5B6056F329ACBEA400A8DF31 /* UIScrollView+ExtrasKit.swift in Sources */,
