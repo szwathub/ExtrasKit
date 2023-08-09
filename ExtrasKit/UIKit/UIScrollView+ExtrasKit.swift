@@ -56,3 +56,45 @@ extension ExtrasKitWrapper where Base: UIScrollView {
         base.setContentOffset(offset, animated: animated)
     }
 }
+
+extension ExtrasKitWrapper where Base: UIScrollView {
+
+    /// Take screenshot of view.
+    ///
+    /// - Parameter opaque: A Boolean flag indicating whether the bitmap is opaque.
+    /// - Returns: A screenshot image of view.
+    public func screenshot(_ opaque: Bool) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(base.contentSize, opaque, UIScreen.main.scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+
+        let savedContentOffset = base.contentOffset
+        let savedFrame = base.frame
+        let contentSize = base.contentSize
+        let oldBounds = base.layer.bounds
+
+        base.layer.bounds = CGRect(x: oldBounds.origin.x,
+                                   y: oldBounds.origin.y,
+                                   width: contentSize.width,
+                                   height: contentSize.height)
+
+        base.contentOffset = .zero
+        base.frame = CGRect(
+            x: 0, y: 0, width: base.contentSize.width, height: base.contentSize.height
+        )
+
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+
+        base.layer.render(in: context)
+        base.layer.bounds = oldBounds
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+
+        base.frame = savedFrame // 恢复frame
+        base.contentOffset = savedContentOffset // 如果不设置这一句，屏幕可能会移动
+
+        return image
+    }
+}

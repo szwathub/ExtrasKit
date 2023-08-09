@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 <for new features.>
+- Add a method that fetch key window
+- Add a method that take screenshot for `UIScrollView`
 
 ### Fixed
 <for any bug fixes.>
