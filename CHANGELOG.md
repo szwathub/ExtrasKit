@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 <for new features.>
-- Add a method that fetch key window
-- Add a method that take screenshot for `UIScrollView`
 
 ### Fixed
 <for any bug fixes.>
@@ -21,6 +19,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 <for now removed features.>
+
+---
+
+## [2.0.3] - 2023-8-24
+### Added
+<for new features.>
+
+- Add a method that fetch key window.
+- Add a method that take screenshot for `UIScrollView`.
 
 ---
 
@@ -41,6 +48,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add a property `sum` for `Array` that calculates the total of any sequence
 - Add a property `color` for `String` that creates color
 
-[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.2...develop
+[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.3...develop
 [2.0.1]: https://github.com/szwathub/ExtrasKit/compare/2.0.0...szwathub:2.0.1
 [2.0.2]: https://github.com/szwathub/ExtrasKit/compare/2.0.1...szwathub:2.0.2
+[2.0.3]: https://github.com/szwathub/ExtrasKit/compare/2.0.2...szwathub:2.0.3
