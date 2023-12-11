@@ -22,9 +22,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ---
 
+## [2.0.4] - 2023-12-11
+### Added
+- Add a method that turn off any dragging in `UIPageViewController`.
+
 ## [2.0.3] - 2023-8-24
 ### Added
-<for new features.>
 
 - Add a method that fetch key window.
 - Add a method that take screenshot for `UIScrollView`.
@@ -33,7 +36,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.0.2] - 2023-3-13
 ### Added
-<for new features.>
 
 - Add a method that scrolls the scroll view contents until the specified position is visible.
 - Add a safely subscript funciton for protocol `Collection`.
@@ -48,7 +50,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add a property `sum` for `Array` that calculates the total of any sequence
 - Add a property `color` for `String` that creates color
 
-[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.3...develop
+[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.4...develop
 [2.0.1]: https://github.com/szwathub/ExtrasKit/compare/2.0.0...szwathub:2.0.1
 [2.0.2]: https://github.com/szwathub/ExtrasKit/compare/2.0.1...szwathub:2.0.2
 [2.0.3]: https://github.com/szwathub/ExtrasKit/compare/2.0.2...szwathub:2.0.3
+[2.0.4]: https://github.com/szwathub/ExtrasKit/compare/2.0.3...szwathub:2.0.4
