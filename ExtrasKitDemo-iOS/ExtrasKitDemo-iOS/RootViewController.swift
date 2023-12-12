@@ -25,7 +25,7 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = "bbbbbb".ek.color
-//        UIColor(hexString: )
+
         // Do any additional setup after loading the view, typically from a nib.
         if #available(iOS 14.0, *) {
             let picker = UIColorPickerViewController()
@@ -34,11 +34,6 @@ class RootViewController: UIViewController {
         } else {
 
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
@@ -54,7 +49,6 @@ extension RootViewController: UIColorPickerViewControllerDelegate {
         }
 
         view.backgroundColor = string.ek.color
-//        UIColor(hexString: string)
 
         print(string)
     }
