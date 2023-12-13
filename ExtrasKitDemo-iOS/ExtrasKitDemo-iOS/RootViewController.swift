@@ -16,12 +16,6 @@ import ExtrasKit
 
 class RootViewController: UIViewController {
 
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView()
-
-        return tableView
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = "bbbbbb".ek.color
