@@ -28,6 +28,13 @@ class RootViewController: UIViewController {
         } else {
 
         }
+
+        var asd = [1, 2, 2, 3, 3, 4, 5, 5]
+        print(asd.ek.deduplicate({ $0 }))
+
+        var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
+        let deduplication = cast.ek.deduplicate { $0 }
+        print(deduplication)
     }
 }
 

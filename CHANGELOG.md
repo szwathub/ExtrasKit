@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 <for new features.>
-
+- Add a method that remove all duplicate elements for `Array`.
 ### Fixed
 <for any bug fixes.>
 
