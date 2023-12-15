@@ -11,8 +11,8 @@
 //      2022/11/9: Created by szwathub on 2022/11/9
 //
 
-import Foundation
 import UIKit
+import Foundation
 
 extension String: ExtrasKitCompatibleValue { }
 
@@ -68,6 +68,13 @@ extension ExtrasKitWrapper where Base == String {
 }
 
 extension ExtrasKitWrapper where Base == String {
+
+    /// Obtains a newly created file URL referencing the local file or directory at path.
+    ///
+    /// If an empty string is used for the path, then the path is assumed to be "."
+    public var fileURL: URL {
+        return URL(fileURLWithPath: base)
+    }
 
     /// Validates if a given string is a valid email address.
     ///

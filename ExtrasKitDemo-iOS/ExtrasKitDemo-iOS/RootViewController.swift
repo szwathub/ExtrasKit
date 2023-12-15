@@ -30,11 +30,15 @@ class RootViewController: UIViewController {
         }
 
         var asd = [1, 2, 2, 3, 3, 4, 5, 5]
-        print(asd.ek.deduplicate({ $0 }))
+        print(asd.ek.unique({ $0 }))
 
         var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
-        let deduplication = cast.ek.deduplicate { $0 }
-        print(deduplication)
+        let unique = cast.ek.unique { $0 }
+        print(unique)
+
+        let asdas = ""
+        print(asdas.ek.fileURL)
+        print(asdas.ek.isValidEmail())
     }
 }
 

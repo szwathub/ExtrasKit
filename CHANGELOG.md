@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 <for new features.>
-- Add a method that remove all duplicate elements for `Array`.
+- Add a method that remove all duplicate elements for `Sequence`.
+- Add a method that create a file URL referencing the local file or directory at path.
+
 ### Fixed
 <for any bug fixes.>
 

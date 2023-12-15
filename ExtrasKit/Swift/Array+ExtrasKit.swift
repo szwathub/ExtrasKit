@@ -43,27 +43,31 @@ extension ExtrasKitWrapper where Base: RangeReplaceableCollection, Base.Element:
 
         return (nil, base)
     }
+}
 
-    /// Returns a new collection of the same type containing, in order, the
-    /// elements of the original collection that remove all duplicate elements.
+extension ExtrasKitWrapper where Base: Sequence {
+
+    /// Returns a new sequence of the same type containing, in order, the
+    /// unique elements in the original sequence.
     ///
     ///     var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
-    ///     let deduplication = cast.ek.deduplicate { $0 }
-    ///     print(deduplication)
+    ///     let unique = cast.ek.unique { $0 }
+    ///     print(unique)
     ///     // Prints "["Vivien", "Marlon", "Kim", "Karl"]"
     ///
-    /// - Parameter filter: A closure that takes an element of the
-    ///   sequence as its argument and returns returns a transformed value indicating
-    ///   whether the element is duplicated and original element should be included
-    ///   in the returned collection.
-    /// - Returns: A collection of the elements after removing all duplicate elements.
+    /// - Parameter predicate: A closure that takes an element of the
+    ///   sequence as its argument and returns a transformed value indicating
+    ///   whether the element is unique and original element should be included
+    ///   in the returned sequence.
+    /// - Returns: A sequence of the elements consisting of the unique elements
+    ///   in the original sequence.
     ///
-    /// - Complexity: O(*n * n*), where *n* is the length of the collection.
-    public mutating func deduplicate<E: Equatable>(_ filter: (Base.Element) -> E) -> [Base.Element] {
-
+    /// - Complexity: O(*n * n*), where *n* is the length of the sequence.
+    public mutating func unique<E>(_ predicate: (Base.Element) -> E) -> [Base.Element]
+    where E: Equatable {
         return base.reduce([]) { unique, element in
-            let key = filter(element)
-            if !unique.map({ filter($0) }).contains(key) {
+            let key = predicate(element)
+            if !unique.map({ predicate($0) }).contains(key) {
                 return unique + [element]
             }
 
