@@ -65,13 +65,10 @@ extension ExtrasKitWrapper where Base: Sequence {
     /// - Complexity: O(*n * n*), where *n* is the length of the sequence.
     public mutating func unique<E>(_ predicate: (Base.Element) -> E) -> [Base.Element]
     where E: Equatable {
-        return base.reduce([]) { unique, element in
-            let key = predicate(element)
-            if !unique.map({ predicate($0) }).contains(key) {
-                return unique + [element]
+        return base.reduce(into: []) { unique, element in
+            if !unique.contains(where: { predicate($0) == predicate(element) }) {
+                unique.append(element)
             }
-
-            return unique
         }
     }
 }

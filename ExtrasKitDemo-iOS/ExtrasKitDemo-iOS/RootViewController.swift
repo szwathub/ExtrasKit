@@ -30,7 +30,7 @@ class RootViewController: UIViewController {
         }
 
         var asd = [1, 2, 2, 3, 3, 4, 5, 5]
-        print(asd.ek.unique({ $0 }))
+        print(asd.ek.unique { $0 })
 
         var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
         let unique = cast.ek.unique { $0 }
@@ -57,4 +57,14 @@ extension RootViewController: UIColorPickerViewControllerDelegate {
 
         print(string)
     }
+}
+
+extension Array {
+    func withoutDuplicates<E: Equatable>(keyPath path: KeyPath<Element, E>) -> [Element] {
+            return reduce(into: [Element]()) { result, element in
+                if !result.contains(where: { $0[keyPath: path] == element[keyPath: path] }) {
+                    result.append(element)
+                }
+            }
+        }
 }
