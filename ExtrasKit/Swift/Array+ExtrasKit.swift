@@ -55,6 +55,21 @@ extension ExtrasKitWrapper where Base: Sequence {
     ///     print(unique)
     ///     // Prints "["Vivien", "Marlon", "Kim", "Karl"]"
     ///
+    /// In this example, `predicate` indicating whether the element is unique
+    /// and original element should be included in the returned sequence
+    /// by using `KeyPath`.
+    ///
+    ///     struct Student {
+    ///         var name: String
+    ///     }
+    ///
+    ///     var students: [Student] = [
+    ///         Student(name: "Vivien"), Student(name: "Marlon"), Student(name: "Vivien")
+    ///     ]
+    ///     let unique = students.ek.unique(\.name)
+    ///     print(unique)
+    ///     // Prints "[Student(name: "Vivien"), Student(name: "Marlon")]"
+    ///
     /// - Parameter predicate: A closure that takes an element of the
     ///   sequence as its argument and returns a transformed value indicating
     ///   whether the element is unique and original element should be included

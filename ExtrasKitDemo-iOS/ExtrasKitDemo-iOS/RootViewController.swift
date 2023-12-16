@@ -14,6 +14,10 @@
 import UIKit
 import ExtrasKit
 
+struct Student {
+    var name: String
+}
+
 class RootViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -31,9 +35,18 @@ class RootViewController: UIViewController {
 
         var asd = [1, 2, 2, 3, 3, 4, 5, 5]
         print(asd.ek.unique { $0 })
+        print(asd.ek.unique(\.hashValue))
 
-        var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
-        let unique = cast.ek.unique { $0 }
+//        var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
+//        let unique = cast.ek.unique { $0 }
+//        print(unique)
+
+        var students: [Student] = [
+            Student(name: "Vivien"), Student(name: "Marlon"),
+            Student(name: "Kim"), Student(name: "Karl"),
+            Student(name: "Vivien")
+        ]
+        let unique = students.ek.unique(\.name)
         print(unique)
 
         let asdas = ""
