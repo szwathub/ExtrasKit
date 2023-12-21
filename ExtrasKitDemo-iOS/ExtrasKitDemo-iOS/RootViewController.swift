@@ -24,34 +24,16 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = "bbbbbb".ek.color
 
-        // Do any additional setup after loading the view, typically from a nib.
-        if #available(iOS 14.0, *) {
-            let picker = UIColorPickerViewController()
-            picker.delegate = self
-            present(picker, animated: true)
-        } else {
+        var asd = [1, 2, 9]
+        let result = asd.ek.diff([1, 2, 3], [2, 3, 4], [4, 5, 6]) { $0 }
+        print(result)
 
-        }
-
-        var asd = [1, 2, 2, 3, 3, 4, 5, 5]
-        print(asd.ek.unique { $0 })
-        print(asd.ek.unique(\.hashValue))
-
-//        var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
-//        let unique = cast.ek.unique { $0 }
-//        print(unique)
-
-        var students: [Student] = [
-            Student(name: "Vivien"), Student(name: "Marlon"),
-            Student(name: "Kim"), Student(name: "Karl"),
-            Student(name: "Vivien")
-        ]
-        let unique = students.ek.unique(\.name)
-        print(unique)
-
-        let asdas = ""
-        print(asdas.ek.fileURL)
-        print(asdas.ek.isValidEmail())
+//        var students: [Student] = [
+//            Student(name: "Vivien"), Student(name: "Marlon"), Student(name: "Kim")
+//        ]
+//        let difference = students.ek.diff([Student(name: "Vivien")], where: \.name)
+//        print(difference)
+        // Prints "[Student(name: "Marlon"), Student(name: "Kim")]"
     }
 }
 
@@ -79,5 +61,28 @@ extension Array {
                     result.append(element)
                 }
             }
+        }
+
+    func difference <T: Equatable> (values: [T]...) -> [T] {
+
+            var result = [T]()
+
+            elements: for e in self {
+                if let element = e as? T {
+                    for value in values {
+                        //  if a value is in both self and one of the values arrays
+                        //  jump to the next iteration of the outer loop
+                        if value.contains(element) {
+                            continue elements
+                        }
+                    }
+
+                    //  element it's only in self
+                    result.append(element)
+                }
+            }
+
+            return result
+
         }
 }

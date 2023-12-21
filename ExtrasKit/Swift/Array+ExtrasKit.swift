@@ -86,6 +86,46 @@ extension ExtrasKitWrapper where Base: Sequence {
             }
         }
     }
+
+    /// Returns a new sequence of the same type containing, in order, the
+    /// difference elements in the original sequence and the given sequences.
+    ///
+    ///     var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
+    ///     let difference = cast.ek.diff(["Vivien"]) { $0 }
+    ///     print(difference)
+    ///     // Prints "["Marlon", "Kim", "Karl"]"
+    ///     
+    /// In this example, `predicate` indicating whether the element is unique
+    /// and original element should be included in the returned sequence
+    /// by using `KeyPath`.
+    ///
+    ///     var students: [Student] = [
+    ///         Student(name: "Vivien"), Student(name: "Marlon"),
+    ///         Student(name: "Kim")
+    ///     ]
+    ///     let difference = students.ek.diff([Student(name: "Vivien")], where: \.name)
+    ///     print(difference)
+    ///     // Prints "[Student(name: "Marlon"), Student(name: "Kim")]"
+    ///
+    /// - Parameters:
+    ///   - others: A list of sequences of the elements subtracted from original sequence.
+    ///   - predicate: A closure that takes an element of the sequence as its
+    ///   argument and returns a transformed value indicating whether the element
+    ///   is unique and original element should be included in the returned sequence.
+    /// - Returns: A sequence of the elements which is difference between the original
+    ///   sequence and the given sequence.
+    ///
+    /// - Complexity: O(*n * m*), where *n* is the length of the sequence and
+    ///   *m* is the number of elements in the given sequences.
+    public mutating func diff<S, E>(_ others: S..., where predicate: (Base.Element) -> E) -> [Base.Element]
+    where S: Sequence, E: Equatable, S.Element == Base.Element {
+        let other = others.flatMap { $0 }
+        return base.reduce(into: []) { difference, element in
+            if !other.contains(where: { predicate($0) == predicate(element) }) {
+                difference.append(element)
+            }
+        }
+    }
 }
 
 extension ExtrasKitWrapper where Base: Sequence, Base.Element: AdditiveArithmetic {
