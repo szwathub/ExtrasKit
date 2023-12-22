@@ -126,6 +126,60 @@ extension ExtrasKitWrapper where Base: Sequence {
             }
         }
     }
+
+    /// Returns a new sequence of the same type containing, in order, the
+    /// intersective elements in the original sequence and the given sequences.
+    ///
+    ///     var cast = ["Vivien", "Marlon", "Kim", "Karl", "Vivien"]
+    ///     let intersection = cast.ek.intersection(["Vivien"]) { $0 }
+    ///     print(intersection)
+    ///     // Prints "["Vivien"]"
+    ///
+    /// In this example, `predicate` indicating whether the element is intersective
+    /// and original element should be included in the returned sequence by using `KeyPath`.
+    ///
+    ///     var stu: [Student] = [
+    ///         Student(name: "Vivien"), Student(name: "Marlon"),
+    ///         Student(name: "Kim")
+    ///     ]
+    ///     let intersection = stu.ek.intersection([Student(name: "Vivien")], where: \.name)
+    ///     print(intersection)
+    ///     // Prints "[Student(name: "Vivien")]"
+    ///
+    /// - Parameters:
+    ///   - others: A list of sequences of the elements intersected from original sequence.
+    ///   - predicate: A closure that takes an element of the sequence as its
+    ///   argument and returns a transformed value indicating whether the element
+    ///   is intersective and original element should be included in the returned sequence.
+    /// - Returns: A sequence of the elements which is intersective between the original
+    ///   sequence and the given sequence.
+    ///
+    /// - Complexity: O(*n * m*), where *n* is the length of the sequence and
+    ///   *m* is the number of elements in the given sequences.
+    public mutating func intersection<S, E>(_ others: S..., where predicate: (Base.Element) -> E) -> [Base.Element]
+    where S: Sequence, E: Equatable, S.Element == Base.Element {
+        var result = base.map { $0 }
+        var intersection: [Base.Element] = []
+
+        for other in others {
+            //  find common elements and save them in first set
+            //  to intersect in the next loop
+            intersection = other.reduce(into: []) { partial, element in
+                if result.contains(where: { predicate($0) == predicate(element) }) {
+                    partial.append(element)
+                }
+            }
+
+            if intersection.isEmpty {
+                return intersection
+            }
+
+            result = intersection
+            intersection = []
+        }
+
+        return result
+    }
 }
 
 extension ExtrasKitWrapper where Base: Sequence, Base.Element: AdditiveArithmetic {

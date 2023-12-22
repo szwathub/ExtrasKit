@@ -25,7 +25,7 @@ class RootViewController: UIViewController {
         view.backgroundColor = "bbbbbb".ek.color
 
         var asd = [1, 2, 9]
-        let result = asd.ek.diff([1, 2, 3], [2, 3, 4], [4, 5, 6]) { $0 }
+        let result = asd.ek.intersection([1, 2, 3], [2, 3, 4], [2, 4, 5, 6]) { $0 }
         print(result)
 
 //        var students: [Student] = [
@@ -52,37 +52,4 @@ extension RootViewController: UIColorPickerViewControllerDelegate {
 
         print(string)
     }
-}
-
-extension Array {
-    func withoutDuplicates<E: Equatable>(keyPath path: KeyPath<Element, E>) -> [Element] {
-            return reduce(into: [Element]()) { result, element in
-                if !result.contains(where: { $0[keyPath: path] == element[keyPath: path] }) {
-                    result.append(element)
-                }
-            }
-        }
-
-    func difference <T: Equatable> (values: [T]...) -> [T] {
-
-            var result = [T]()
-
-            elements: for e in self {
-                if let element = e as? T {
-                    for value in values {
-                        //  if a value is in both self and one of the values arrays
-                        //  jump to the next iteration of the outer loop
-                        if value.contains(element) {
-                            continue elements
-                        }
-                    }
-
-                    //  element it's only in self
-                    result.append(element)
-                }
-            }
-
-            return result
-
-        }
 }

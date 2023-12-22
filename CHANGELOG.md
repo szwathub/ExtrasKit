@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add a method that remove all duplicate elements for `Sequence`.
 - Add a method that create a file URL referencing the local file or directory at path.
 - Add a method that diff the original and the given sequences.
+- Add a method that intersect the original and the given sequences.
 
 ### Fixed
 <for any bug fixes.>
