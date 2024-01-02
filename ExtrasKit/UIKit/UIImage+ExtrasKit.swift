@@ -14,6 +14,44 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
+import AVFoundation
+
+extension UIImage: ExtrasKitCompatible { }
+
+extension ExtrasKitWrapper where Base: UIImage {
+
+    /// Returns a scaled image that maintains the aspect ratio specified by a CGSize
+    /// within a bounding CGRect.
+    ///
+    /// - Parameter aspectRatio: The width & height ratio, or aspect, you wish to maintain.
+    /// - Returns: Returns the cropped image.
+    public func cropping(with aspectRatio: CGSize) -> UIImage? {
+        let newRect = AVMakeRect(
+            aspectRatio: aspectRatio,
+            insideRect: .init(origin: .zero, size: base.size)
+        )
+
+        return cropping(to: newRect)
+    }
+
+    /// Create an image using the image contained within the subrectangle `rect` of `image`.
+    ///
+    /// - Parameter rect: Rect to crop image to.
+    /// - Returns: Returns the cropped iamge.
+    public func cropping(to rect: CGRect) -> UIImage? {
+        var newRect = rect
+        newRect.origin.x    *= base.scale
+        newRect.origin.y    *= base.scale
+        newRect.size.width  *= base.scale
+        newRect.size.height *= base.scale
+
+        guard let imageRef = base.cgImage?.cropping(to: newRect) else {
+            return nil
+        }
+
+        return UIImage(cgImage: imageRef, scale: base.scale, orientation: .up)
+    }
+}
 
 extension UIImage {
 
@@ -179,24 +217,6 @@ extension UIImage {
         UIGraphicsEndImageContext()
 
         return image
-    }
-
-    /// Create an image using the image contained within the subrectangle `rect` of `image`.
-    ///
-    /// - Parameter rect: Rect to crop image to.
-    /// - Returns: Returns the cropped iamge.
-    public func cropping(to rect: CGRect) -> UIImage? {
-        var newRect = rect
-        newRect.origin.x    *= scale
-        newRect.origin.y    *= scale
-        newRect.size.width  *= scale
-        newRect.size.height *= scale
-
-        guard let imageRef = cgImage?.cropping(to: newRect) else {
-            return nil
-        }
-
-        return UIImage(cgImage: imageRef, scale: self.scale, orientation: .up)
     }
 }
 
