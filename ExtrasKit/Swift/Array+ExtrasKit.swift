@@ -180,6 +180,45 @@ extension ExtrasKitWrapper where Base: Sequence {
 
         return result
     }
+
+    /// Returns a new sequence of the same type containing, in order, the
+    /// union elements in the original sequence and the given sequences.
+    ///
+    ///     var cast = ["Vivien", "Marlon", "Vivien"]
+    ///     let union = cast.ek.union(["Vivien", "Kim", "Karl"]) { $0 }
+    ///     print(union)
+    ///     // Prints "["Vivien", "Marlon", "Kim", "Karl"]"
+    ///
+    /// In this example, `predicate` indicating whether the element is equal
+    /// to original element should be included in the returned sequence by using `KeyPath`.
+    ///
+    ///     var stu: [Student] = [
+    ///         Student(name: "Vivien"), Student(name: "Marlon")
+    ///     ]
+    ///     let union = stu.ek.union([Student(name: "Vivien"), Student(name: "Kim")], where: \.name)
+    ///     print(union)
+    ///     // Prints "[Student(name: "Vivien"), Student(name: "Marlon"), Student(name: "Kim")]"
+    ///
+    /// - Parameters:
+    ///   - others: A list of sequences of the elements unioned from original sequence.
+    ///   - predicate: A closure that takes an element of the sequence as its
+    ///   argument and returns a transformed value indicating whether the element
+    ///   is equal to original element should be included in the returned sequence.
+    /// - Returns: A sequence of the elements which is union between the original
+    ///   sequence and the given sequence.
+    ///
+    /// - Complexity: O(*n * m*), where *n* is the length of the sequence and
+    ///   *m* is the number of elements in the given sequences.
+    public mutating func union<S, E>(_ others: S..., where predicate: (Base.Element) -> E) -> [Base.Element]
+    where S: Sequence, E: Equatable, S.Element == Base.Element {
+        var map = base.map { $0 }
+        map.append(contentsOf: others.flatMap { $0 })
+        return map.reduce(into: []) { union, element in
+            if !union.contains(where: { predicate($0) == predicate(element) }) {
+                union.append(element)
+            }
+        }
+    }
 }
 
 extension ExtrasKitWrapper where Base: Sequence, Base.Element: AdditiveArithmetic {
