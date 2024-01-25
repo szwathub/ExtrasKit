@@ -32,5 +32,6 @@ class RootViewController: UIViewController {
         print(asd.ek.union([2, 3, 4], where: { $0 }))
         print(asd)
         
+        
     }
 }
