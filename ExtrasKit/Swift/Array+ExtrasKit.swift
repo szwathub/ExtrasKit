@@ -243,4 +243,17 @@ extension ExtrasKitWrapper where Base: Collection {
 
         return base[index]
     }
+
+    /// Accesses random elements.
+    ///
+    /// - Parameter count: The number of randomly accessed elements.
+    /// - Returns: A sequence of randomly accessed elements.
+    public subscript (random count: Int) -> [Base.Element] {
+        var map = base.map { $0 }
+        guard count <= base.count else {
+            return map
+        }
+
+        return map.shuffled().suffix(count).map { $0 }
+    }
 }
