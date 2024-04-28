@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 <for new features.>
+- Add a method that fetch top view controller for `UIApplication`.
 
 ### Fixed
 <for any bug fixes.>

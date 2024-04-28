@@ -31,4 +31,21 @@ extension ExtrasKitWrapper where Base: UIApplication {
                 $0.isKeyWindow
             }
     }
+
+    public var topViewController: UIViewController? {
+        var topViewController = keyWindow?.rootViewController
+        guard topViewController != nil else { return nil }
+        while let controller = topViewController?.presentedViewController  {
+            topViewController = controller
+        }
+        if let controller = topViewController as? UITabBarController {
+            topViewController = controller.selectedViewController
+        }
+        if let controller = topViewController as? UINavigationController,
+           controller.viewControllers.count > 1 {
+            topViewController = controller.viewControllers.last
+        }
+
+        return topViewController
+    }
 }

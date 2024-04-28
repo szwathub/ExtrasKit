@@ -29,7 +29,8 @@ class RootViewController: UIViewController {
 //        print(result)
 
         var asd = [1, 1, 2, 3]
-        print(asd.ek.union([2, 3, 4], where: { $0 }))
-        print(asd)
+//        print(asd.ek.union([2, 3, 4], where: { $0 }))
+//        print(asd)
+        print(asd.ek[random: 9])
     }
 }
