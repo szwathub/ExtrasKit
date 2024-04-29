@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 <for new features.>
 - Add a method that fetch top view controller for `UIApplication`.
+- Add a method that accesses random elements for `Array`.
 
 ### Fixed
 <for any bug fixes.>
