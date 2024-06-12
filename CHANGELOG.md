@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 <for new features.>
-- Add a method that fetch top view controller for `UIApplication`.
-- Add a method that accesses random elements for `Array`.
 
 ### Fixed
 <for any bug fixes.>
@@ -23,6 +21,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 <for now removed features.>
 
 ---
+
+## [2.0.6] - 2024-6-12
+### Added
+<for new features.>
+- Add a method that fetch top view controller for `UIApplication`.
+- Add a method that accesses random elements for `Array`.
 
 ## [2.0.5] - 2024-1-21
 ### Added
@@ -57,9 +61,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add a property `sum` for `Array` that calculates the total of any sequence
 - Add a property `color` for `String` that creates color
 
-[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.5...develop
+[unreleased]: https://github.com/szwathub/ExtrasKit/compare/2.0.6...develop
 [2.0.1]: https://github.com/szwathub/ExtrasKit/compare/2.0.0...szwathub:2.0.1
 [2.0.2]: https://github.com/szwathub/ExtrasKit/compare/2.0.1...szwathub:2.0.2
 [2.0.3]: https://github.com/szwathub/ExtrasKit/compare/2.0.2...szwathub:2.0.3
 [2.0.4]: https://github.com/szwathub/ExtrasKit/compare/2.0.3...szwathub:2.0.4
 [2.0.5]: https://github.com/szwathub/ExtrasKit/compare/2.0.4...szwathub:2.0.5
+[2.0.6]: https://github.com/szwathub/ExtrasKit/compare/2.0.5...szwathub:2.0.6
